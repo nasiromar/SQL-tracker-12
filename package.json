@@ -1,0 +1,24 @@
+{
+  "name": "sql-tracker-12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nasiromar/SQL-tracker-12.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nasiromar/SQL-tracker-12/issues"
+  },
+  "homepage": "https://github.com/nasiromar/SQL-tracker-12#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4",
+    "mysql2": "^3.1.2"
+  }
+}
