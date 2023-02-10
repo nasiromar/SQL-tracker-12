@@ -56,3 +56,24 @@ async function menu(){
 
      }                        
 }
+async function viewDepartments() {
+    const departments = await database.viewAllDepartments();
+    console.table(departments);
+}
+
+async function viewRoles() {
+    const roles = await database.viewAllRoles();
+    console.table(roles);
+}
+
+async function viewEmployees() {
+    const employees = await database.viewAllEmployees();
+    console.table(employees);
+}
+async function addDepartment() {
+    const answer = await inquirer.Prompt([{
+        type: 'input',
+        message: 'what is the name of the department?',
+        name: 'departmentName'
+    }]);
+
