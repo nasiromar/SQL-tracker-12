@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   },
   "homepage": "https://github.com/nasiromar/SQL-tracker-12#readme",
   "dependencies": {
-    "inquirer": "^9.1.4",
-    "mysql2": "^3.1.2"
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.0.1"
   }
 }
