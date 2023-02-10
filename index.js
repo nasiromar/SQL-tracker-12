@@ -117,4 +117,27 @@ async function addEmployee() {
     console.log('leads');
     const leadsName = leads.map((leads) => {
         return `${leads.first_name} ${leads.last_name}`;
+    });
+    leadsName.push('no lead');
+    console.log(leadsName);
+    let = roleId;
+    let = leadId;
+    const answers = await inquirer.prompt([
+        {
+            type:'input',
+            message: 'what is the employees first name?',
+            name:'first name'
+        },
+        {
+            type:'input',
+            message: 'what is the employees last name?',
+            name:'last name',
+        },
+        {
+            type:'list',
+            message: 'what is the employee role?',
+            choices: rolesTile,
+            name: 'role',
+
+        },
 
