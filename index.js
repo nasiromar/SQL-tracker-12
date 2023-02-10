@@ -140,4 +140,22 @@ async function addEmployee() {
             name: 'role',
 
         },
+        {
+            type: 'list',
+            message: 'who is the employees lead?',
+            choices: leadsName,
+            name: 'lead',
+
+        }
+]);
+
+for (let i = 0; i < leads.length; i++) {
+    if (answers.role === roles[i].title) {
+        roleId = roles[i].id; 
+    }
+}
+for (let i = 0; i < leads.length; i++) {
+    if (answers.lead === `${leads[i].first_name} ${leads[i].last_name}`) {
+        leadId = leads[i].id;
+    }
 
