@@ -77,3 +77,26 @@ async function addDepartment() {
         name: 'departmentName'
     }]);
 
+    await   database.addDepartment(answer.departmentName);
+    console.log('department include');
+}
+
+async function addRole() {
+    const departments = await database.viewAllDepartments();
+    const answers = await inquirer.Prompt([
+        {
+            type: 'input',
+            message: 'what is the title of the role?',
+            name: 'title',
+        },
+        {
+            type: 'input',
+            message: 'what is the salary of the role?',
+            name: 'salary',
+        },
+        {
+            type: 'input',
+            message: 'what department dose this position fit in to ?',
+            name: 'Department'
+        }
+    ]);
