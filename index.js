@@ -19,3 +19,40 @@ async function menu(){
         }
     ]);
 
+    switch(answers.userChoice) {
+        case 'view all Departments': {
+            await viewDepartments();
+            await menu();
+            break;
+        }
+        case 'view all Roles': {
+            await viewRoles();
+            await menu();
+            break;
+        }
+        case 'view all Employees': {
+            await viewEmployees();
+            await menu();
+            break;
+        }
+        case 'add a Department': {
+            await addDepartment();
+            await menu();
+            break;
+        }
+        case 'add a Role': {
+            await addRole();
+            await menu();  
+            break;
+        }
+        case 'add a Employee': {
+            await addEmployee();
+            await menu();
+            break;
+        }
+        default: {
+            process.exit(0);
+        }
+
+     }                        
+}
