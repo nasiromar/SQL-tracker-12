@@ -100,3 +100,21 @@ async function addRole() {
             name: 'Department'
         }
     ]);
+    for(let i = 0; i < departments.length; i++) {
+        if(answers.department === departmenst[i].name) {
+            console.log(departments[i].id);
+            await database.addRole(answers.title, answers.salary, departments[i].id);
+        }
+    }
+    console.log('role included');
+}
+
+async function addEmployee() {
+    const roles = await database.viewAllRoles();
+    console.log('roles');
+    const rolesTitle = roles.map(role => role.title);
+    const leads = await database.viewAllEmployees();
+    console.log('leads');
+    const leadsName = leads.map((leads) => {
+        return `${leads.first_name} ${leads.last_name}`;
+
