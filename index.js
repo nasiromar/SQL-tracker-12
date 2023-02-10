@@ -158,4 +158,16 @@ for (let i = 0; i < leads.length; i++) {
     if (answers.lead === `${leads[i].first_name} ${leads[i].last_name}`) {
         leadId = leads[i].id;
     }
+}
+if(!leadId) {
+    leadId = null;
+}
+
+await database.addEmployee(answers.first_name, answers.last_name, roleId, leadId);
+console.log('employee included')
+}
+
+
+
+    menu();
 
