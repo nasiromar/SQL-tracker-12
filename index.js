@@ -71,7 +71,7 @@ async function viewEmployees() {
     console.table(employees);
 }
 async function addDepartment() {
-    const answer = await inquirer.Prompt([{
+    const answer = await inquirer.prompt([{
         type: 'input',
         message: 'what is the name of the department?',
         name: 'departmentName'
