@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const database = require('./data/database');
 
 async function menu(){
-    const answers = await inquirer.Prompt([
+    const answers = await inquirer.prompt([
         {
             type: 'list',
             message: 'what would you like to do?',
@@ -83,7 +83,7 @@ async function addDepartment() {
 
 async function addRole() {
     const departments = await database.viewAllDepartments();
-    const answers = await inquirer.Prompt([
+    const answers = await inquirer.prompt([
         {
             type: 'input',
             message: 'what is the title of the role?',
