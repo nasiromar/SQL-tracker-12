@@ -41,7 +41,7 @@ async function menu(){
             await menu();
             break;
         }
-        case 'add a Role': {
+        case 'Add a Role': {
             await addRole();
             await menu();  
             break;
@@ -103,8 +103,10 @@ async function addRole() {
             name: 'Department'
         }
     ]);
+    console.log('before for loop');
     for(let i = 0; i < departments.length; i++) {
-        if(answers.department === departmenst[i].name) {
+        console.log('department = ', departments[i].name);
+        if(answers.Department === departments[i].name) {
             console.log(departments[i].id);
             await database.addRole(answers.title, answers.salary, departments[i].id);
         }
