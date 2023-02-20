@@ -18,7 +18,7 @@ class Database {
 
     viewAllEmployees() {
         return this.connection.query(
-            "SELECT * FROM employees JOIN roles ON roles.id = employees.role_id JOIN department ON roles.department_id = department.id JOIN employees e ON e.id = employees.lead_id");
+            "SELECT * FROM employees JOIN roles ON roles.id = employees.role_id JOIN department ON roles.department_id = department.id JOIN employees e ON e.id = employees.role_id");
 }
 
     addDepartment(departmentName) {
