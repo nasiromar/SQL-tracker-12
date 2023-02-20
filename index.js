@@ -35,7 +35,8 @@ async function menu(){
             await menu();
             break;
         }
-        case 'add a Department': {
+        case 'Add a Department': {
+            console.log(' case - Add a Department');
             await addDepartment();
             await menu();
             break;
@@ -51,6 +52,7 @@ async function menu(){
             break;
         }
         default: {
+            console.log('hit default,choice = ', answers.userChoice)
             process.exit(0);
         }
 
@@ -71,6 +73,7 @@ async function viewEmployees() {
     console.table(employees);
 }
 async function addDepartment() {
+    console.log('add department');
     const answer = await inquirer.prompt([{
         type: 'input',
         message: 'what is the name of the department?',

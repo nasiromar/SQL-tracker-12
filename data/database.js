@@ -23,7 +23,7 @@ class Database {
 
     addDepartment(departmentName) {
         return this.connection.query(
-            "INSERT INTO departments SET name = ?",
+            "INSERT INTO department SET name = ?",
             departmentName
         );
     }
