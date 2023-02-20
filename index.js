@@ -46,7 +46,7 @@ async function menu(){
             await menu();  
             break;
         }
-        case 'add a Employee': {
+        case 'Add a Employee': {
             await addEmployee();
             await menu();
             break;
