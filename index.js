@@ -125,8 +125,8 @@ async function addEmployee() {
     });
     leadsName.push('no lead');
     console.log(leadsName);
-    let = roleId;
-    let = leadId;
+    let  roleId;
+    let  leadId;
     const answers = await inquirer.prompt([
         {
             type:'input',
