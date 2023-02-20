@@ -141,7 +141,7 @@ async function addEmployee() {
         {
             type:'list',
             message: 'what is the employee role?',
-            choices: rolesTile,
+            choices: rolesTitle,
             name: 'role',
 
         },
